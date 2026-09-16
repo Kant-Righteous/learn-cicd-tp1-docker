@@ -49,3 +49,25 @@ Création d'une application minimale avec Flask, conteneurisée à l'aide d'un D
   ![Build et Run](Ex5/01.png)
 - Vérification dans le navigateur :  
   ![Page Web Flask](Ex5/02.png)
+
+
+## Exercice 6: Utilisation de docker compose
+
+### 1. Description
+Déploiement d'une architecture multi-conteneurs (Flask et MongoDB) orchestrée avec Docker Compose. L'application enregistre les visites dans la base de données et incrémente le compteur à chaque actualisation.
+
+### 2. Commandes exécutées
+- `docker compose up -d --build` : Construction et démarrage des conteneurs en arrière-plan
+- `docker compose ps` : Vérification du statut des conteneurs
+- `docker compose exec db mongosh` : Accès au shell interactif de MongoDB
+- `docker compose down` : Arrêt et nettoyage des ressources
+
+### 3. Captures d'écran
+- Construction et démarrage des services :  
+  ![Compose build et ps](Ex6/01.png)
+- Première visite (Visites : 1) :  
+  ![Première visite](Ex6/02.png)
+- Actualisation de la page (Visites : 4) :  
+  ![Compteur actualisé](Ex6/03.png)
+- Vérification des données insérées dans MongoDB :  
+  ![Vérification mongosh](Ex6/04.png)
